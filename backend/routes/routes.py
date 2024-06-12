@@ -83,8 +83,8 @@ def embed_route(ontology):
     return jsonify({"message": result})
 
 
-@ontology_blueprint.route("/evaluate/onto=<ontology>?<model_id>", methods=["GET"])
-def predict_route(model_id, ontology):
+@ontology_blueprint.route("/evaluate/<ontology>/<model_id>", methods=["GET"])
+def predict_route(ontology, model_id):
 
     result = evaluator.predict_func(ontology_file=ontology, model_id=model_id)
     return jsonify({"message": result})
