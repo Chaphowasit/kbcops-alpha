@@ -301,6 +301,8 @@ This guide will walk you through deploying our project on an EC2 instance.
    cd kbcops-alpha
    ```
 
+   **Note:** change main.py on app.run() to app.run(host='0.0.0.0') # you can adjust what you want
+
 3. **Set Up a Virtual Environment**
 
    - Install `venv` (if not already installed).
